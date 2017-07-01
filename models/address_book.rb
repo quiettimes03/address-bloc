@@ -4,7 +4,7 @@ class AddressBook
   attr_reader :entries
 
 
-  def initailize
+  def initialize
     @entries = []
   end
 
