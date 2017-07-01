@@ -29,4 +29,13 @@ class AddressBook
     end
   end
 
+  def import_from_csv2(file_name)
+    csv_text2 = File.read(file_name)
+    csv2 = CSV.parse(csv_text2, headers: true, skip_blanks: true)
+    csv2.each do |row|
+      row_hash = row.to_hash
+      add_entry(row_hash["name"], row_hash["phone_number"], row_hash["email"])
+    end
+  end
+
 end
