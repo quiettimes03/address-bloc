@@ -10,7 +10,7 @@ class AddressBook
 
   def add_entry(name, phone_number, email)
     index = 0
-    entries.each do |array|
+    entries.each do |entry|
       if name < entry.name
         break
       end
